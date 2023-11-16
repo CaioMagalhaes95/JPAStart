@@ -30,15 +30,15 @@ public class CategoriaServiceImpl implements CategoriaService{
         
     }
 
-//     @Override
-// public Optional<DadosCategoriaDTO> obterCategoriaPorId(Long id) {
-//     return categoriaRepository.findById(id).map((Categoria c) ->
-//         DadosCategoriaDTO.builder()
-//             .id(c.getId())
-//             .nome(c.getNome())
-//             .build()
-//     );
-// }
+            @Override
+        public DadosCategoriaDTO obterCategoriaPorId(Long id) {
+            return categoriaRepository.findById(id).map((Categoria c) -> {
+                return DadosCategoriaDTO.builder()
+                    .id(c.getId())
+                    .nome(c.getNome())
+                    .build();
+            )};
+        }
 
     @Override
     public void remover(Long id) {

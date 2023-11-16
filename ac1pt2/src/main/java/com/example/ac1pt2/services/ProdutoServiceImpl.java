@@ -44,16 +44,15 @@ public class ProdutoServiceImpl implements ProdutoService{
         }).collect(Collectors.toList());
     }
 
-    // @Override
-    // public DadosProdutoDTO obterPorId(Long id) {
-    //     return produtoRepository.findById(id).map((Produto p) -> {
-    //         return DadosProdutoDTO.builder()
-    //         .id(p.getId())
-    //         .nome(p.getNome())
-    //         .preco(p.getPreco())
-    //         .build();
-    //     })
-    // }
+    public DadosProdutoDTO obterPorId(Long id){
+        return produtoRepository.findById(id).map((Curso c) -> {
+            return DadosProdutoDTO.builder()
+            .id(c.getId())
+            .nome(c.getNome())
+            .preco(c.getPreco())
+            .build();
+        });
+    }
 
 
     @Override
