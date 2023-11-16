@@ -9,7 +9,7 @@ import com.example.ac1pt2.models.Categoria;
 public interface CategoriaService {
 
     Categoria salvar(CategoriaDTO CategoriaDTO);
-    DadosCategoriaDTO obterCategoriaPorId(Long id);
+    CategoriaDTO obterCategoriaPorId(Long id);
     void remover(Long id);
     void editar(Long id, CategoriaDTO CategoriaDto);
     List<CategoriaDTO> obterTodos();

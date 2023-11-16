@@ -61,16 +61,16 @@ public class Produto {
     }
 
 
-    // @ManyToOne()
-    // @JoinColumn(name = "categoria")
-    // private Categoria categoria;
+    @ManyToOne()
+    @JoinColumn(name = "categoria")
+    private Categoria categoria;
 
-    // public Categoria getCategoriaProduto() {
-    //     return categoria;
-    // }
+    public Categoria getCategoriaProduto() {
+        return categoria;
+    }
 
-    // public void setCategoriaProduto(Categoria categoria) {
-    //     this.categoria = categoria;
-    // }
+    public void setCategoriaProduto(Categoria categoria) {
+        this.categoria = categoria;
+    }
 
 }

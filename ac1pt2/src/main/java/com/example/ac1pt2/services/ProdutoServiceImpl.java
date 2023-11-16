@@ -34,9 +34,9 @@ public class ProdutoServiceImpl implements ProdutoService{
     }
 
     @Override
-    public List<DadosProdutoDTO> obterTodos(){
+    public List<ProdutoDTO> obterTodos(){
         return produtoRepository.findAll().stream().map(p -> {
-            return DadosProdutoDTO.builder()
+            return ProdutoDTO.builder()
             .id(p.getId())
             .nome(p.getNome())
             .preco(p.getPreco())
@@ -44,14 +44,14 @@ public class ProdutoServiceImpl implements ProdutoService{
         }).collect(Collectors.toList());
     }
 
-    public DadosProdutoDTO obterPorId(Long id){
-        return produtoRepository.findById(id).map((Curso c) -> {
-            return DadosProdutoDTO.builder()
-            .id(c.getId())
-            .nome(c.getNome())
-            .preco(c.getPreco())
+    public ProdutoDTO obterPorId(Long id){
+        return produtoRepository.findById(id).map((Produto p) -> {
+            return ProdutoDTO.builder()
+            .id(p.getId())
+            .nome(p.getNome())
+            .preco(p.getPreco())
             .build();
-        });
+        }).orElseThrow((null));
     }
 
 

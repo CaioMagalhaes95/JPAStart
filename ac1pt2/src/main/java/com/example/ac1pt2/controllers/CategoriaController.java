@@ -41,7 +41,7 @@ public class CategoriaController {
     }
 
     @GetMapping("{id}")
-    public DadosCategoriaDTO obterCategoria(@RequestParam Long id){
+    public CategoriaDTO obterCategoria(@RequestParam Long id){
         return categoriaService.obterCategoriaPorId(id);
     }
 

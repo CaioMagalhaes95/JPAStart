@@ -12,10 +12,10 @@ import com.example.ac1pt2.models.Produto;
 @Service
 public interface ProdutoService {
     Produto salvar(ProdutoDTO ProdutoDTO);
-    DadosProdutoDTO obterPorId(Long id);
+    ProdutoDTO obterPorId(Long id);
     void remover(Long id);
     void editar(Long id, ProdutoDTO ProdutoDto);
-    List<DadosProdutoDTO> obterTodos();
+    List<ProdutoDTO> obterTodos();
     Produto findProduto(Long id);
     
 }

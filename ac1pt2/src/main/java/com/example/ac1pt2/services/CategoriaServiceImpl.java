@@ -31,13 +31,14 @@ public class CategoriaServiceImpl implements CategoriaService{
     }
 
             @Override
-        public DadosCategoriaDTO obterCategoriaPorId(Long id) {
+        public CategoriaDTO obterCategoriaPorId(Long id) {
             return categoriaRepository.findById(id).map((Categoria c) -> {
-                return DadosCategoriaDTO.builder()
+                 return CategoriaDTO.builder()
                     .id(c.getId())
                     .nome(c.getNome())
                     .build();
-            )};
+            }).orElseThrow((null));
+               
         }
 
     @Override

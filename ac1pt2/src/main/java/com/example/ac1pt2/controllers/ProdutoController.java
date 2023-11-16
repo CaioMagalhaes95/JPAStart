@@ -38,7 +38,7 @@ public class ProdutoController {
     }
 
     @GetMapping
-    public List<DadosProdutoDTO> getProdutos(){
+    public List<ProdutoDTO> getProdutos(){
         return produtoService.obterTodos();
     }
 
