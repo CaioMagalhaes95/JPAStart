@@ -43,14 +43,11 @@ public class ProdutoController {
     }
 
     @GetMapping("{id}")
-    public Produto obterProdutoPorId(@RequestParam Long id) {
-        return produtoService.findProduto(id);
+    public ProdutoDTO obterProdutoPorId(@PathVariable Long id) {
+        return produtoService.obterPorId(id);
     }
 
-    // @GetMapping("{id}")
-    // public DadosProdutoDTO getProdutoPorId(@PathVariable Long id){
-    //     return produtoService.obterProdutoPorId(id);
-    // }
+     
 
     @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

@@ -16,6 +16,5 @@ public interface ProdutoService {
     void remover(Long id);
     void editar(Long id, ProdutoDTO ProdutoDto);
     List<ProdutoDTO> obterTodos();
-    Produto findProduto(Long id);
     
 }

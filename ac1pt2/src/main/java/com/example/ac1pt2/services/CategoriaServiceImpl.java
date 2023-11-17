@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import javax.management.RuntimeErrorException;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.ac1pt2.dtos.CategoriaDTO;
@@ -14,9 +15,10 @@ import com.example.ac1pt2.models.Categoria;
 import com.example.ac1pt2.repository.CategoriaRepository;
 
 import jakarta.transaction.Transactional;
-
+@Service
 public class CategoriaServiceImpl implements CategoriaService{
 
+    @Autowired
     CategoriaRepository categoriaRepository;
 
     @Override

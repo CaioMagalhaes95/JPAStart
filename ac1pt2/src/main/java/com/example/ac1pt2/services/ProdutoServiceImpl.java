@@ -81,12 +81,7 @@ public class ProdutoServiceImpl implements ProdutoService{
         }
     }
 
-    @Override
-    public Produto findProduto(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findProduto'");
-    }
-
+ 
     
 
 }
